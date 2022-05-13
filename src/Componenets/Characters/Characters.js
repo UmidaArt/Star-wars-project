@@ -25,7 +25,7 @@ const Characters = () => {
             <div className="pagination">
                 {
                     Array(Math.ceil(characters.count/10)).fill(0).map((buttonNam, idx) => (
-                        <button className="paginationBtn" key={idx} onClick={() => setPage(idx + 1)}>{idx + 1}</button>
+                        <button className="paginationBtn" key={idx} onClick={() => setPage(idx)}>{idx + 1}</button>
                     ))
                 }
             </div>
@@ -33,10 +33,10 @@ const Characters = () => {
                 {
                     characters.results.map((people, index) => (
                         <div key={index} className='item-col'>
-                            <Link to={`/characters/${index + 1}`}>
+                            <Link to={`/characters/${10 * page + index + 1}`}>
                                 <div className="elementItem">
                                     <img src={`https://starwars-visualguide.com/assets/img/characters/${10 * page + index + 1}.jpg`} alt="" className="elementImg"/>
-                                    <h2>{people.name}</h2>
+                                    <h2>{people.name}{10 * page + index + 1}</h2>
                                 </div>
                             </Link>
                         </div>

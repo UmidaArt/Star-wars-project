@@ -35,9 +35,9 @@ const Vehicles = () => {
                 {
                     vehicles.results.map((cars, index) => (
                         <div key={index} className='col-4'>
-                            <Link to={`/vehicles/${index + 1}`}>
+                            <Link to={`/vehicles/${10 * vehiclesPage + index + 1}`}>
                                 <div className="elementItem">
-                                    <img src={`https://starwars-visualguide.com/assets/img/vehicles/${index + 1}.jpg`} alt="" className="elementImg"/>
+                                    <img src={`https://starwars-visualguide.com/assets/img/vehicles/${10 * vehiclesPage + index + 1}.jpg`} alt="" className="elementImg"/>
                                     <h2>{cars.name}</h2>
                                 </div>
                             </Link>

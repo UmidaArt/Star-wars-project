@@ -35,10 +35,10 @@ const Films = () => {
                 {
                     films.results.map((film, index) => (
                         <div key={index} className='col-4'>
-                            <Link to={`/films/${index + 1}`}>
+                            <Link to={`/films/${10 * filmPage + index + 1}`}>
                                 <div className="elementItem">
-                                    <img src={`https://starwars-visualguide.com/assets/img/films/${index + 1}.jpg`} alt="" className="elementFilmImg"/>
-                                    <h2>{film.title}</h2>
+                                    <img src={`https://starwars-visualguide.com/assets/img/films/${10 * filmPage + index + 1}.jpg`} alt="" className="elementFilmImg"/>
+                                    <h2>{film.title} {10 * filmPage + index + 1}</h2>
                                 </div>
                             </Link>
                         </div>

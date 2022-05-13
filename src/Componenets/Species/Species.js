@@ -35,9 +35,9 @@ const Species = () => {
                 {
                     species.results.map((item, index) => (
                         <div key={index} className='col-4'>
-                            <Link to={`/species/${index + 1}`}>
+                            <Link to={`/species/${10 * speciesPage + index + 1}`}>
                                 <div className="elementItem">
-                                    <img src={`https://starwars-visualguide.com/assets/img/species/${index + 1}.jpg`} alt="" className="elementImg"/>
+                                    <img src={`https://starwars-visualguide.com/assets/img/species/${10 * speciesPage + index + 1}.jpg`} alt="" className="elementImg"/>
                                     <h2>{item.name}</h2>
                                 </div>
                             </Link>

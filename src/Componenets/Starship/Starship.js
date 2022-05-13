@@ -35,9 +35,9 @@ const Starship = () => {
                 {
                     starships.results.map((starCar, index) => (
                         <div key={index} className='col-4'>
-                            <Link to={`/starships/${index + 1}`}>
+                            <Link to={`/starships/${10 * starshipsPage + index + 1}`}>
                                 <div className="elementItem">
-                                    <img src={`https://starwars-visualguide.com/assets/img/starships/${index + 1}.jpg`} alt="" className="elementImg"/>
+                                    <img src={`https://starwars-visualguide.com/assets/img/starships/${10 * starshipsPage + index + 1}.jpg`} alt="" className="elementImg"/>
                                     <h2>{starCar.name}</h2>
                                 </div>
                             </Link>
